@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="orientiring_test._1" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQDIhCCACBaARAAAACgQAACAAg8IgCAQHYiAgBBgQI=</HashCode>
+      <FileName>1.1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test._2_var" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQBIhCCACBaARAAAACgQAADAAg8IgCAQHYiAABBgQI=</HashCode>
+      <FileName>2_var.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.choosetest" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAARAABACAAAACAAA4ABAAAHAAAAAACIA=</HashCode>
+      <FileName>choosetest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.Form1" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAAEAAACAQQDEEAACAAAQiAAwIAEAQAEQCBAFQAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.Program" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.student_registr" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACKQCACAAAYgAAAAGAAAAABAAA=</HashCode>
+      <FileName>student_registr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.surnames" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>surnames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.test_create" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAACSAAJgADADkoAATUgAuIAABAUAACSAAUCI=</HashCode>
+      <FileName>test_create.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.test_create_settings" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEAAAEAQCAIABAAAiCAABACAAIYAAAAAGAAAAAAAAA=</HashCode>
+      <FileName>test_create_settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.trener_dostyp" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAASAAAACAAAAAAAACAAAACAAAIAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>trener_dostyp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.uslov_znaky" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>+CASYhAACCCAARgBBICAQIACAM07gEAgwHQ/QiBQSCA=</HashCode>
+      <FileName>uslov znaky.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.var_3" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQBMhCCACBaARAAAACgQAACAAg8IgCAQHYiAABBgQI=</HashCode>
+      <FileName>var_3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.var4" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQBIhCCACBaARAAAACgQAACAAg8IgCAQHYiAABBgQI=</HashCode>
+      <FileName>var4.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.var5" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQDIhSCACBaARAAAACgQAACAAg8AgCAQHYiAABJgQI=</HashCode>
+      <FileName>var5.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.var6" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARQDIhCCACBaARAAAACgQAACAAg8IgCAQHYiAABBgQI=</HashCode>
+      <FileName>var6.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.var7" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQDIhCiACBaARAAAACgQAACAAg8IgCAQHYiAABBgQI=</HashCode>
+      <FileName>var7.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.var8" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQDIhCCACBaARAAAACgQAACAAg8IgCAQHYiAABBgQI=</HashCode>
+      <FileName>var8.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.Properties.Resources" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAEBAAAAAIEAABAJHAAAGwCEAAAAAAQCAAAAAII=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="orientiring_test.Properties.Settings" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

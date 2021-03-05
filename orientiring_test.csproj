@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E33B5C30-743F-4EDE-A3A4-3A529B78CF04}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>orientiring_test</RootNamespace>
+    <AssemblyName>orientiring_test</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Татьяна\Desktop\Слава\игры\тест спорт ориентирование\setup\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>ru</TargetCulture>
+    <ProductName>test-sport-orientiring</ProductName>
+    <PublisherName>Dictus Games</PublisherName>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C8D54BDBBC7FAED95B1EAE9821727688827D9BA9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>orientiring_test_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>packages\Ionic.Zip.1.9.1.8\lib\Ionic.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AppCenter.3.1.0\lib\netstandard1.0\Microsoft.AppCenter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AppCenter.Analytics.3.1.0\lib\netstandard1.0\Microsoft.AppCenter.Analytics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AppCenter.Crashes.3.1.0\lib\netstandard1.0\Microsoft.AppCenter.Crashes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1.1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1.1.Designer.cs">
+      <DependentUpon>1.1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_var.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_var.Designer.cs">
+      <DependentUpon>2_var.cs</DependentUpon>
+    </Compile>
+    <Compile Include="choosetest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="choosetest.Designer.cs">
+      <DependentUpon>choosetest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ready_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ready_test.Designer.cs">
+      <DependentUpon>ready_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ready_test_go.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ready_test_go.Designer.cs">
+      <DependentUpon>ready_test_go.cs</DependentUpon>
+    </Compile>
+    <Compile Include="student_registr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student_registr.Designer.cs">
+      <DependentUpon>student_registr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="surnames.cs" />
+    <Compile Include="test_create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test_create.Designer.cs">
+      <DependentUpon>test_create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test_create_settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test_create_settings.Designer.cs">
+      <DependentUpon>test_create_settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trener_dostyp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trener_dostyp.Designer.cs">
+      <DependentUpon>trener_dostyp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uslov znaky.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uslov znaky.Designer.cs">
+      <DependentUpon>uslov znaky.cs</DependentUpon>
+    </Compile>
+    <Compile Include="var4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="var4.Designer.cs">
+      <DependentUpon>var4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="var5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="var5.Designer.cs">
+      <DependentUpon>var5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="var6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="var6.Designer.cs">
+      <DependentUpon>var6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="var7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="var7.Designer.cs">
+      <DependentUpon>var7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="var8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="var8.Designer.cs">
+      <DependentUpon>var8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="var_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="var_3.Designer.cs">
+      <DependentUpon>var_3.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="1.1.resx">
+      <DependentUpon>1.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_var.resx">
+      <DependentUpon>2_var.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="choosetest.resx">
+      <DependentUpon>choosetest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ready_test.resx">
+      <DependentUpon>ready_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ready_test_go.resx">
+      <DependentUpon>ready_test_go.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_registr.resx">
+      <DependentUpon>student_registr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test_create.resx">
+      <DependentUpon>test_create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test_create_settings.resx">
+      <DependentUpon>test_create_settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trener_dostyp.resx">
+      <DependentUpon>trener_dostyp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uslov znaky.resx">
+      <DependentUpon>uslov znaky.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="var4.resx">
+      <DependentUpon>var4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="var5.resx">
+      <DependentUpon>var5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="var6.resx">
+      <DependentUpon>var6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="var7.resx">
+      <DependentUpon>var7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="var8.resx">
+      <DependentUpon>var8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="var_3.resx">
+      <DependentUpon>var_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="orientiring_test_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\вариант 1.1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="documentation.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icon.ico" />
+    <Content Include="todolist.txt" />
+    <None Include="Resources\65.png" />
+    <None Include="Resources\55.png" />
+    <None Include="Resources\64.png" />
+    <None Include="Resources\77.png" />
+    <None Include="Resources\76.png" />
+    <None Include="Resources\75.png" />
+    <None Include="Resources\74.png" />
+    <None Include="Resources\103.png" />
+    <None Include="Resources\93.png" />
+    <None Include="Resources\83.png" />
+    <None Include="Resources\73.png" />
+    <None Include="Resources\63.png" />
+    <None Include="Resources\54.png" />
+    <None Include="Resources\43.png" />
+    <None Include="Resources\4 вариант.png" />
+    <None Include="Resources\33.png" />
+    <None Include="Resources\23.png" />
+    <None Include="Resources\13.png" />
+    <None Include="Resources\53.png" />
+    <None Include="Resources\102.png" />
+    <None Include="Resources\92.png" />
+    <None Include="Resources\82.png" />
+    <None Include="Resources\72.png" />
+    <None Include="Resources\62.png" />
+    <None Include="Resources\52.png" />
+    <None Include="Resources\42.png" />
+    <None Include="Resources\32.png" />
+    <None Include="Resources\22.png" />
+    <None Include="Resources\12.png" />
+    <None Include="Resources\3 вариант.png" />
+    <None Include="Resources\2 вариант.png" />
+    <None Include="Resources\101.png" />
+    <None Include="Resources\91.png" />
+    <None Include="Resources\81.png" />
+    <None Include="Resources\71.png" />
+    <None Include="Resources\61.png" />
+    <None Include="Resources\51.png" />
+    <None Include="Resources\41.png" />
+    <None Include="Resources\31.png" />
+    <None Include="Resources\21.png" />
+    <None Include="Resources\11.png" />
+    <None Include="Resources\asCMil0GiQ0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
