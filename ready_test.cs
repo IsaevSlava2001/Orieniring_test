@@ -91,7 +91,7 @@ namespace orientiring_test
                     {
                         File.Delete(dir);
                     }
-                    Directory.Delete(@"C:/data_orientiring/users_test/logs");
+                    Directory.Delete(@"C:/data_orientiring/users_test/logs",true);
                 }
                 //---------------------------------------------------
                 else

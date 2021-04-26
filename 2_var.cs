@@ -109,7 +109,8 @@ namespace orientiring_test
 
         private void _2_var_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            this.Size = new Size(1556, 864);
+            FormBorderStyle = FormBorderStyle.None;
             pictureBox1.Visible = false;
             pictureBox2.Visible = false;
             pictureBox3.Visible = false;
@@ -208,6 +209,12 @@ namespace orientiring_test
             if (numb_test == 11)
             {
                 button2.Visible = true;
+                pictureBox10.Visible = false;
+                radioButton1.Visible = false;
+                radioButton2.Visible = false;
+                radioButton3.Visible = false;
+                radioButton4.Visible = false;
+                label1.Visible = false;
 
             }
             switch (numb_test)
@@ -516,6 +523,7 @@ namespace orientiring_test
 
         private void button2_Click(object sender, EventArgs e)
         {
+            textBox1.ForeColor = Color.ForestGreen;
             button1.Visible = false;
             end = true;
             pictureBox11.Visible = true;
@@ -600,155 +608,186 @@ namespace orientiring_test
                 int min = Convert.ToInt32(minutes);
                 int sec = Convert.ToInt32(seconds);
                 alltime = ((starttime + 1) * 60) - (min * 60 + sec);
-                label6.Visible = true;
+                textBox1.Visible = true;
                 string Out = "Вы прошли тест за ";
                 File.AppendAllText(@"C:\data_orientiring\name\results\2_var\time.txt", Convert.ToString(alltime));
-                label6.Text = Out;
-                label6.Text = label6.Text + Convert.ToString(alltime);
-                label6.Text = label6.Text + " секунд";
-                label6.Text = label6.Text + "\n Ваше количество баллов- ";
-                label6.Text = label6.Text + point;
-                label6.Text = label6.Text + "\n В первом вы ";
+            char[] time_mass = new char[5];
+            time_mass = alltime.ToString().ToCharArray();
+            string pre_last = "z";
+            if (alltime >= 10)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    if (time_mass[i].ToString() == time_mass.Last().ToString() && i != 0)
+                    {
+                        pre_last = time_mass[i - 1].ToString();
+                        break;
+                    }
+                }
+            }
+            textBox1.Text = Out;
+                textBox1.Text = textBox1.Text + Convert.ToString(alltime);
+            if (time_mass.Last().ToString() == "1" && pre_last != "1")
+            {
+                textBox1.Text = textBox1.Text + " секунду";
+            }
+            else if ((time_mass.Last().ToString() == "2" || time_mass.Last().ToString() == "3" || time_mass.Last().ToString() == "4") && pre_last != "1")
+            {
+                textBox1.Text = textBox1.Text + " секунды";
+            }
+            else if (time_mass.Last().ToString() == "5" || time_mass.Last().ToString() == "6" || time_mass.Last().ToString() == "7" || time_mass.Last().ToString() == "8" || time_mass.Last().ToString() == "9" || time_mass.Last().ToString() == "0")
+            {
+                textBox1.Text = textBox1.Text + " секунд";
+            }
+            else if (pre_last == "1")
+            {
+                textBox1.Text = textBox1.Text + " секунд";
+            }
+                textBox1.Text = textBox1.Text + Environment.NewLine + "Ваше количество баллов- ";
+                textBox1.Text = textBox1.Text + point;
+                textBox1.Text = textBox1.Text + Environment.NewLine + "В первом вопросе Вы ";
                 if (n1p == 4)
                 {
-                    label6.Text = label6.Text + "пропустили вопрос";
+                    textBox1.Text = textBox1.Text + "пропустили вопрос";
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\1_ans.txt", "4");
                 }
                 else
                 {
-                    label6.Text = label6.Text + "ответили ";
-                    label6.Text = label6.Text + n1p;
+                    textBox1.Text = textBox1.Text + "ответили ";
+                    textBox1.Text = textBox1.Text + n1p;
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\1_ans.txt", Convert.ToString(n1p));
                 }
-                label6.Text = label6.Text + "\n Правильный ответ ";
-                label6.Text = label6.Text + n1r;
-                label6.Text = label6.Text + "\n Во втором вы ";
+                textBox1.Text = textBox1.Text + Environment.NewLine + "Правильный ответ ";
+                textBox1.Text = textBox1.Text + n1r;
+                textBox1.Text = textBox1.Text + Environment.NewLine + "Во втором вопросе Вы ";
                 if (n2p == 4)
                 {
-                    label6.Text = label6.Text + "пропустили вопрос";
+                    textBox1.Text = textBox1.Text + "пропустили вопрос";
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\2_ans.txt", "4");
                 }
                 else
                 {
-                    label6.Text = label6.Text + "ответили ";
-                    label6.Text = label6.Text + n2p;
+                    textBox1.Text = textBox1.Text + "ответили ";
+                    textBox1.Text = textBox1.Text + n2p;
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\2_ans.txt", Convert.ToString(n2p));
                 }
-                label6.Text = label6.Text + "\n Правильный ответ ";
-                label6.Text = label6.Text + n2r;
-                label6.Text = label6.Text + "\n В третьем вы ";
+                textBox1.Text = textBox1.Text + Environment.NewLine + "Правильный ответ ";
+                textBox1.Text = textBox1.Text + n2r;
+                textBox1.Text = textBox1.Text + Environment.NewLine + "В третьем вопросе Вы ";
                 if (n3p == 4)
                 {
-                    label6.Text = label6.Text + "пропустили вопрос";
+                    textBox1.Text = textBox1.Text + "пропустили вопрос";
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\3_ans.txt", "4");
                 }
                 else
                 {
-                    label6.Text = label6.Text + "ответили ";
-                    label6.Text = label6.Text + n3p;
+                    textBox1.Text = textBox1.Text + "ответили ";
+                    textBox1.Text = textBox1.Text + n3p;
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\3_ans.txt", Convert.ToString(n3p));
                 }
-                label6.Text = label6.Text + "\n Правильный ответ ";
-                label6.Text = label6.Text + n3r;
-                label6.Text = label6.Text + "\n В четвертом вы ";
+                textBox1.Text = textBox1.Text + Environment.NewLine + "Правильный ответ ";
+                textBox1.Text = textBox1.Text + n3r;
+                textBox1.Text = textBox1.Text + Environment.NewLine + "В четвертом вопросе Вы ";
                 if (n4p == 4)
                 {
-                    label6.Text = label6.Text + "пропустили вопрос";
+                    textBox1.Text = textBox1.Text + "пропустили вопрос";
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\4_ans.txt", "4");
                 }
                 else
                 {
-                    label6.Text = label6.Text + "ответили ";
-                    label6.Text = label6.Text + n4p;
+                    textBox1.Text = textBox1.Text + "ответили ";
+                    textBox1.Text = textBox1.Text + n4p;
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\4_ans.txt", Convert.ToString(n4p));
                 }
-                label6.Text = label6.Text + "\n Правильный ответ ";
-                label6.Text = label6.Text + n4r;
-                label6.Text = label6.Text + "\n В пятом вы ";
+                textBox1.Text = textBox1.Text + Environment.NewLine + "Правильный ответ ";
+                textBox1.Text = textBox1.Text + n4r;
+                textBox1.Text = textBox1.Text + Environment.NewLine + "В пятом вопросе Вы ";
                 if (n5p == 4)
                 {
-                    label6.Text = label6.Text + "пропустили вопрос";
+                    textBox1.Text = textBox1.Text + "пропустили вопрос";
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\5_ans.txt", "4");
                 }
                 else
                 {
-                    label6.Text = label6.Text + "ответили ";
-                    label6.Text = label6.Text + n5p;
+                    textBox1.Text = textBox1.Text + "ответили ";
+                    textBox1.Text = textBox1.Text + n5p;
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\5_ans.txt", Convert.ToString(n5p));
                 }
-                label6.Text = label6.Text + "\n Правильный ответ ";
-                label6.Text = label6.Text + n5r;
-                label6.Text = label6.Text + "\n В шестом вы ";
+                textBox1.Text = textBox1.Text + Environment.NewLine + "Правильный ответ ";
+                textBox1.Text = textBox1.Text + n5r;
+                textBox1.Text = textBox1.Text + Environment.NewLine + "В шестом вопросе Вы ";
                 if (n6p == 4)
                 {
-                    label6.Text = label6.Text + "пропустили вопрос";
+                    textBox1.Text = textBox1.Text + "пропустили вопрос";
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\6_ans.txt", "4");
                 }
                 else
                 {
-                    label6.Text = label6.Text + "ответили ";
-                    label6.Text = label6.Text + n6p;
+                    textBox1.Text = textBox1.Text + "ответили ";
+                    textBox1.Text = textBox1.Text + n6p;
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\6_ans.txt", Convert.ToString(n6p));
                 }
-                label6.Text = label6.Text + "\n Правильный ответ ";
-                label6.Text = label6.Text + n6r;
-                label6.Text = label6.Text + "\n В седьмом вы ";
+                textBox1.Text = textBox1.Text + Environment.NewLine + "Правильный ответ ";
+                textBox1.Text = textBox1.Text + n6r;
+                textBox1.Text = textBox1.Text + Environment.NewLine + "В седьмом вопросе Вы ";
                 if (n7p == 4)
                 {
-                    label6.Text = label6.Text + "пропустили вопрос";
+                    textBox1.Text = textBox1.Text + "пропустили вопрос";
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\7_ans.txt", "4");
                 }
                 else
                 {
-                    label6.Text = label6.Text + "ответили ";
-                    label6.Text = label6.Text + n7p;
+                    textBox1.Text = textBox1.Text + "ответили ";
+                    textBox1.Text = textBox1.Text + n7p;
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\7_ans.txt", Convert.ToString(n7p));
                 }
-                label6.Text = label6.Text + "\n Правильный ответ ";
-                label6.Text = label6.Text + n7r;
-                label6.Text = label6.Text + "\n В восьмом вы ";
+                textBox1.Text = textBox1.Text + Environment.NewLine + "Правильный ответ ";
+                textBox1.Text = textBox1.Text + n7r;
+                textBox1.Text = textBox1.Text + Environment.NewLine + "В восьмом вопросе Вы ";
                 if (n8p == 4)
                 {
-                    label6.Text = label6.Text + "пропустили вопрос";
+                    textBox1.Text = textBox1.Text + "пропустили вопрос";
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\8_ans.txt", "4");
                 }
                 else
                 {
-                    label6.Text = label6.Text + "ответили ";
-                    label6.Text = label6.Text + n8p;
+                    textBox1.Text = textBox1.Text + "ответили ";
+                    textBox1.Text = textBox1.Text + n8p;
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\8_ans.txt", Convert.ToString(n8p));
                 }
-                label6.Text = label6.Text + "\n Правильный ответ ";
-                label6.Text = label6.Text + n8r;
-                label6.Text = label6.Text + "\n В девятом вы ";
+                textBox1.Text = textBox1.Text + Environment.NewLine + "Правильный ответ ";
+                textBox1.Text = textBox1.Text + n8r;
+                textBox1.Text = textBox1.Text + Environment.NewLine + "В девятом вопросе Вы ";
                 if (n9p == 4)
                 {
-                    label6.Text = label6.Text + "пропустили вопрос";
+                    textBox1.Text = textBox1.Text + "пропустили вопрос";
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\9_ans.txt", "4");
                 }
                 else
                 {
-                    label6.Text = label6.Text + "ответили ";
-                    label6.Text = label6.Text + n9p;
+                    textBox1.Text = textBox1.Text + "ответили ";
+                    textBox1.Text = textBox1.Text + n9p;
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\9_ans.txt", Convert.ToString(n9p));
                 }
-                label6.Text = label6.Text + "\n Правильный ответ ";
-                label6.Text = label6.Text + n9r;
-                label6.Text = label6.Text + "\n В десятом вы ";
+                textBox1.Text = textBox1.Text + Environment.NewLine + "Правильный ответ ";
+                textBox1.Text = textBox1.Text + n9r;
+                textBox1.Text = textBox1.Text + Environment.NewLine + "В десятом вопросе Вы ";
                 if (n10p == 4)
                 {
-                    label6.Text = label6.Text + "пропустили вопрос";
+                    textBox1.Text = textBox1.Text + "пропустили вопрос";
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\10_ans.txt", "4");
                 }
                 else
                 {
-                    label6.Text = label6.Text + "ответили ";
-                    label6.Text = label6.Text + n10p;
+                    textBox1.Text = textBox1.Text + "ответили ";
+                    textBox1.Text = textBox1.Text + n10p;
                     File.AppendAllText(@"C:\data_orientiring\name\results\2_var\10_ans.txt", Convert.ToString(n10p));
                 }
-                label6.Text = label6.Text + "\n Правильный ответ ";
-                label6.Text = label6.Text + n10r;
-                button2.Visible = false;
+                textBox1.Text = textBox1.Text + Environment.NewLine + "Правильный ответ ";
+                textBox1.Text = textBox1.Text + n10r;
+            textBox1.Text = textBox1.Text + Environment.NewLine + "Вы ответили правильно на следующее количество вопросов: ";
+            textBox1.Text = textBox1.Text + point;
+            button2.Visible = false;
                 if (n1p == n1r && n2p == n2r && n3p == n3r && n4p == n4r && n5p == n5r && n6p == n6r && n7p == n7r && n8p == n8r && n9p == n9r && n10p == n10r)
                 {
                     MessageBox.Show("Вы прошли тест правильно", "Поздравляем", MessageBoxButtons.OK, MessageBoxIcon.Question);

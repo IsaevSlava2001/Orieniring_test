@@ -64,8 +64,11 @@ namespace orientiring_test
         }
 
         private void exitbutton_Click(object sender, EventArgs e)
-        {//удаляем папку с именем текущего тренера
-            File.Delete(@"C:\data_orientiring\name\coach_name.txt");
+        {//удаляем папку с именем текущего тренера если она присутствует
+            if (File.Exists(@"C:\data_orientiring\name\coach_name.txt"))
+            {
+                File.Delete(@"C:\data_orientiring\name\coach_name.txt");
+            }
             student_registr f = new student_registr();
             f.Close();
             Environment.Exit(1);
@@ -258,6 +261,8 @@ namespace orientiring_test
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.Size = new Size(1556, 864);
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         private void button1_Click(object sender, EventArgs e)

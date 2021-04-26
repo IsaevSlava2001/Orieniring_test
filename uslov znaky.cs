@@ -29,7 +29,8 @@ namespace orientiring_test
         private void uslov_znaky_Load(object sender, EventArgs e)
         {
             //подгрузка нужных полей
-            this.WindowState = FormWindowState.Maximized;
+            this.Size = new Size(1556, 864);
+            FormBorderStyle = FormBorderStyle.None;
             button17.Visible = false;
             pictureBox1.Visible = false;
             pictureBox2.Visible = false;

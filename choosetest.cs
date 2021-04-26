@@ -24,7 +24,8 @@ namespace orientiring_test
 
         private void choosetest_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            this.Size = new Size(1556, 864);
+            FormBorderStyle = FormBorderStyle.None;
             FileStream file1 = new FileStream(@"C:\data_orientiring\name\name.txt", FileMode.Open);
             StreamReader reader = new StreamReader(file1);
             string a = reader.ReadToEnd();

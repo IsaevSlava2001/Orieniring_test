@@ -22,7 +22,8 @@ namespace orientiring_test
 
         private void student_registr_Load(object sender, EventArgs e)
         {
-
+            this.Size = new Size(1556, 864);
+            FormBorderStyle = FormBorderStyle.None;
         }
         private void textBox1_Enter(object sender, EventArgs e)
         {

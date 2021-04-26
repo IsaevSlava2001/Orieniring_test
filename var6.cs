@@ -110,7 +110,7 @@ namespace orientiring_test
 
         private void var6_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            
             pictureBox1.Visible = false;
             pictureBox2.Visible = false;
             pictureBox3.Visible = false;
