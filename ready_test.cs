@@ -38,7 +38,7 @@ namespace orientiring_test
                 }
                 catch (OutOfMemoryException ex)//ждем ошибку превышения памяти
                 {
-                    MessageBox.Show("Ошибка чтения файла","Ошибка",MessageBoxButtons.OK,MessageBoxIcon.Warning);//сообщаем об  этом
+                    MessageBox.Show("Ошибка чтения файла", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);//сообщаем об  этом
                     return;
                 }
                 choosetest.Visible = false;
@@ -52,107 +52,134 @@ namespace orientiring_test
                 //-------------------------
                 //создаем папку с логами
                 Directory.CreateDirectory(@"C:/data_orientiring/users_test/logs");
-                string[] a = dir.Split('\\','.');//разделяем путь
+                string[] a = dir.Split('\\', '.');//разделяем путь
                 string name = a[a.Length - 2];//чтобы получить имя файла
                 File.Copy(dir, $@"C:/data_orientiring/users_test/{name}.zip");//копируем его в нашу папку
                 Directory.CreateDirectory($@"C:/data_orientiring/users_test/{name}");//создаем папку для данных этого теста
                 string dest = $@"C:/data_orientiring/users_test/{name}";
+                bool err_pass = false;
                 using (ZipFile zip = ZipFile.Read($@"C:/data_orientiring/users_test/{name}.zip"))//используем библиотеку Ionic.Zip
                 {
                     foreach (ZipEntry zipe in zip)//пока есть данные в архиве
                     {
-                        zipe.ExtractWithPassword(dest, ExtractExistingFileAction.OverwriteSilently, pass_text_Box.Text);//распаковываем с паролем
+                        try
+                        {
+                            zipe.ExtractWithPassword(dest, ExtractExistingFileAction.OverwriteSilently, pass_text_Box.Text);//распаковываем с паролем
+                        }
+                        catch
+                        {
+                            BadPasswordException err;
+                            err_pass = true;
+                            MessageBox.Show("Неверный пароль!", "Неверный пароль", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Directory.Delete($@"C:/data_orientiring/users_test/{name}", true);
+                            break;
+                        }
                     }
                 }
                 File.Delete($@"C:/data_orientiring/users_test/{name}.zip");//удаляем zip-архив для красоты
                 //данные теста
-                File.Create(@"C:/data_orientiring/users_test/logs/ispicture.txt").Close();
-                File.Create(@"C:/data_orientiring/users_test/logs/muchquestion.txt").Close();
-                File.Create(@"C:/data_orientiring/users_test/logs/name.txt").Close();
-                File.WriteAllText(@"C:/data_orientiring/users_test/logs/coach_name.txt", File.ReadAllText($@"C:/data_orientiring/users_test/{name}/coach_name.txt"));
-                File.WriteAllText(@"C:/data_orientiring/users_test/logs/data_over.txt", File.ReadAllText($@"C:/data_orientiring/users_test/{name}/time_over.txt"));
-                File.WriteAllText(@"C:/data_orientiring/users_test/logs/all_time.txt", File.ReadAllText($@"C:/data_orientiring/users_test/{name}/all_time.txt"));
-                string data = File.ReadAllText(@"C:/data_orientiring/users_test/logs/data_over.txt");
-                //-------------------------
-                //определяем, закончился ли срок действия теста
-                string[] nums_s = data.Split('.', ':', ' ');
-                int[] nums_i = new int[nums_s.Length]; ;
-                for (int i = 0; i < nums_s.Length; i++)
+                if (!err_pass)
                 {
-                    nums_i[i] = Convert.ToInt32(nums_s[i]);
-                }
-                DateTime dateover = new DateTime(nums_i[2], nums_i[1], nums_i[0], nums_i[3], nums_i[4], 00);//создаем новый объект структуры datetime с данными о завершении теста
-                DateTime now = new DateTime();
-                now = DateTime.Now;//текущее время
-                if (now.AddMinutes(1) > dateover)//определяем, вышло ли время на тест
-                {
-                    DialogResult result = MessageBox.Show("Извините, срок действия этого теста уже закончился.\nУдалить его?", "Сообщение", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (result == DialogResult.Yes)
+                    File.Create(@"C:/data_orientiring/users_test/logs/ispicture.txt").Close();
+                    File.Create(@"C:/data_orientiring/users_test/logs/muchquestion.txt").Close();
+                    File.Create(@"C:/data_orientiring/users_test/logs/name.txt").Close();
+                    File.WriteAllText(@"C:/data_orientiring/users_test/logs/coach_name.txt", File.ReadAllText($@"C:/data_orientiring/users_test/{name}/coach_name.txt"));
+                    File.WriteAllText(@"C:/data_orientiring/users_test/logs/data_over.txt", File.ReadAllText($@"C:/data_orientiring/users_test/{name}/time_over.txt"));
+                    File.WriteAllText(@"C:/data_orientiring/users_test/logs/all_time.txt", File.ReadAllText($@"C:/data_orientiring/users_test/{name}/all_time.txt"));
+                    string data = File.ReadAllText(@"C:/data_orientiring/users_test/logs/data_over.txt");
+                    //-------------------------
+                    //определяем, закончился ли срок действия теста
+                    string[] nums_s = data.Split('.', ':', ' ');
+                    int[] nums_i = new int[nums_s.Length]; ;
+                    for (int i = 0; i < nums_s.Length; i++)
                     {
-                        File.Delete(dir);
+                        nums_i[i] = Convert.ToInt32(nums_s[i]);
                     }
-                    Directory.Delete(@"C:/data_orientiring/users_test/logs",true);
-                }
-                //---------------------------------------------------
-                else
-                {
-                    //данные для теста
-                    int muchquestion = 0;
-                    bool isphoto = false;
-                    DirectoryInfo direct = new DirectoryInfo($@"C:/data_orientiring/users_test/{name}");//создание переменной для пути к файлу
-                    foreach (var item in direct.GetDirectories())//проход по всем папками в только что созданной переменной
+                    DateTime dateover = new DateTime(nums_i[2], nums_i[1], nums_i[0], nums_i[3], nums_i[4], 00);//создаем новый объект структуры datetime с данными о завершении теста
+                    DateTime now = new DateTime();
+                    now = DateTime.Now;//текущее время
+                    if (now.AddMinutes(1) > dateover)//определяем, вышло ли время на тест
                     {
-                        muchquestion++;
-                        if (!isphoto)
+                        DialogResult result = MessageBox.Show("Извините, срок действия этого теста уже закончился.\nУдалить его?", "Сообщение", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
                         {
-                            try//определяем есть ли фото в файле методом копирования до исключения
+                            File.Delete(dir);
+                        }
+                        Directory.Delete(@"C:/data_orientiring/users_test/logs", true);
+                    }
+                    //---------------------------------------------------
+                    else
+                    {
+                        //данные для теста
+                        int muchquestion = 0;
+                        bool isphoto = false;
+                        DirectoryInfo direct = new DirectoryInfo($@"C:/data_orientiring/users_test/{name}");//создание переменной для пути к файлу
+                        foreach (var item in direct.GetDirectories())//проход по всем папками в только что созданной переменной
+                        {
+                            muchquestion++;
+                            if (!isphoto)
                             {
-                                File.Copy($@"C:/data_orientiring/users_test/{name}/{muchquestion}/photo.png", $@"C:/data_orientiring/users_test/{name}/{muchquestion}/photo1.png");
-                                isphoto = true;
-                                File.Delete($@"C:/data_orientiring/users_test/{name}/{muchquestion}/photo1.png");
-                            }
-                            catch
-                            {
+                                try//определяем есть ли фото в файле методом копирования до исключения
+                                {
+                                    File.Copy($@"C:/data_orientiring/users_test/{name}/{muchquestion}/photo.png", $@"C:/data_orientiring/users_test/{name}/{muchquestion}/photo1.png");
+                                    isphoto = true;
+                                    File.Delete($@"C:/data_orientiring/users_test/{name}/{muchquestion}/photo1.png");
+                                }
+                                catch
+                                {
 
+                                }
                             }
                         }
+                        File.WriteAllText(@"C:/data_orientiring/users_test/logs/muchquestion.txt", Convert.ToString(muchquestion));
+                        if (isphoto)
+                        {
+                            File.WriteAllText(@"C:/data_orientiring/users_test/logs/ispicture.txt", "true");
+                        }
+                        else
+                        {
+                            File.WriteAllText(@"C:/data_orientiring/users_test/logs/ispicture.txt", "false");
+                        }
+                        File.WriteAllText(@"C:/data_orientiring/users_test/logs/name.txt", Convert.ToString(name));
+                        //---------------------------------------
+                        //вывод данных пользователю
+                        much_question_label.Visible = true;
+                        label_have_pictures.Visible = true;
+                        name_label.Visible = true;
+                        coach_name.Visible = true;
+                        time_for_test.Visible = true;
+                        much_question_label.Text = File.ReadAllText(@"C:/data_orientiring/users_test/logs/muchquestion.txt");
+                        if (File.ReadAllText(@"C:/data_orientiring/users_test/logs/ispicture.txt") == "false")
+                        {
+                            label_have_pictures.Text = "нет";
+                        }
+                        else
+                        {
+                            label_have_pictures.Text = "есть";
+                        }
+                        name_label.Text = File.ReadAllText(@"C:/data_orientiring/users_test/logs/name.txt");
+                        coach_name.Text = File.ReadAllText(@"C:/data_orientiring/users_test/logs/coach_name.txt");
+                        time_for_test.Text = File.ReadAllText(@"C:/data_orientiring/users_test/logs/all_time.txt");
+                        //включаем все кнопки
+                        start.Enabled = true;
+                        choosetest.Visible = true;
+                        pass_text_Box.Visible = true;
+                        pass_text_Box.Text = "Введите пароль";
+                        File.Delete($@"C:/data_orientiring/users_test/{name}.zip");//удаляем файл для красоты
                     }
-                    File.WriteAllText(@"C:/data_orientiring/users_test/logs/muchquestion.txt", Convert.ToString(muchquestion));
-                    if (isphoto)
-                    {
-                        File.WriteAllText(@"C:/data_orientiring/users_test/logs/ispicture.txt", "true");
-                    }
-                    else
-                    {
-                        File.WriteAllText(@"C:/data_orientiring/users_test/logs/ispicture.txt", "false");
-                    }
-                    File.WriteAllText(@"C:/data_orientiring/users_test/logs/name.txt", Convert.ToString(name));
-                    //---------------------------------------
-                    //вывод данных пользователю
-                    much_question_label.Text = File.ReadAllText(@"C:/data_orientiring/users_test/logs/muchquestion.txt");
-                    if (File.ReadAllText(@"C:/data_orientiring/users_test/logs/ispicture.txt") == "false")
-                    {
-                        label_have_pictures.Text = "нет";
-                    }
-                    else
-                    {
-                        label_have_pictures.Text = "есть";
-                    }
-                    name_label.Text = File.ReadAllText(@"C:/data_orientiring/users_test/logs/name.txt");
-                    coach_name.Text = File.ReadAllText(@"C:/data_orientiring/users_test/logs/coach_name.txt");
-                    time_for_test.Text = File.ReadAllText(@"C:/data_orientiring/users_test/logs/all_time.txt");
-                    //включаем все кнопки
-                    start.Enabled = true;
+                }
+                else
+                {
                     choosetest.Visible = true;
                     pass_text_Box.Visible = true;
-                    File.Delete($@"C:/data_orientiring/users_test/{name}.zip");//удаляем файл для красоты
+                    pass_text_Box.Text = "Введите пароль";
                 }
             }
 
             else
             {
                 //если пароль не введен, сообщаем об этом
-                MessageBox.Show("Сначала введите пароль","Внимание!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Сначала введите пароль", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -194,6 +221,11 @@ namespace orientiring_test
             {
                 pass_text_Box.Text = "Введите пароль";
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
