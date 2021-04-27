@@ -49,7 +49,7 @@
             // 
             this.name_test.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.name_test.ForeColor = System.Drawing.Color.ForestGreen;
-            this.name_test.Location = new System.Drawing.Point(524, 109);
+            this.name_test.Location = new System.Drawing.Point(782, 133);
             this.name_test.Margin = new System.Windows.Forms.Padding(4);
             this.name_test.Name = "name_test";
             this.name_test.Size = new System.Drawing.Size(235, 44);
@@ -60,7 +60,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(526, 16);
+            this.label1.Location = new System.Drawing.Point(784, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(233, 89);
@@ -71,7 +71,7 @@
             // 
             this.yes_radioButton.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.yes_radioButton.ForeColor = System.Drawing.Color.ForestGreen;
-            this.yes_radioButton.Location = new System.Drawing.Point(515, 279);
+            this.yes_radioButton.Location = new System.Drawing.Point(773, 303);
             this.yes_radioButton.Margin = new System.Windows.Forms.Padding(4);
             this.yes_radioButton.Name = "yes_radioButton";
             this.yes_radioButton.Size = new System.Drawing.Size(90, 42);
@@ -85,7 +85,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button1.Location = new System.Drawing.Point(729, 602);
+            this.button1.Location = new System.Drawing.Point(987, 626);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 110);
@@ -98,7 +98,7 @@
             // 
             this.label2.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label2.Location = new System.Drawing.Point(517, 184);
+            this.label2.Location = new System.Drawing.Point(775, 208);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(242, 89);
@@ -110,7 +110,7 @@
             this.no_radioButton.AutoSize = true;
             this.no_radioButton.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.no_radioButton.ForeColor = System.Drawing.Color.ForestGreen;
-            this.no_radioButton.Location = new System.Drawing.Point(515, 329);
+            this.no_radioButton.Location = new System.Drawing.Point(773, 353);
             this.no_radioButton.Margin = new System.Windows.Forms.Padding(4);
             this.no_radioButton.Name = "no_radioButton";
             this.no_radioButton.Size = new System.Drawing.Size(90, 42);
@@ -124,7 +124,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label5.Location = new System.Drawing.Point(722, 412);
+            this.label5.Location = new System.Drawing.Point(980, 436);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(190, 89);
@@ -135,7 +135,7 @@
             // 
             this.numericUpDown_count_question.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.numericUpDown_count_question.ForeColor = System.Drawing.Color.ForestGreen;
-            this.numericUpDown_count_question.Location = new System.Drawing.Point(721, 522);
+            this.numericUpDown_count_question.Location = new System.Drawing.Point(979, 546);
             this.numericUpDown_count_question.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown_count_question.Name = "numericUpDown_count_question";
             this.numericUpDown_count_question.Size = new System.Drawing.Size(191, 44);
@@ -146,7 +146,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button2.Location = new System.Drawing.Point(19, 667);
+            this.button2.Location = new System.Drawing.Point(13, 891);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(187, 111);
@@ -159,7 +159,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label3.Location = new System.Drawing.Point(823, 16);
+            this.label3.Location = new System.Drawing.Point(1081, 40);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(297, 89);
@@ -171,7 +171,7 @@
             this.datetimePicker.CustomFormat = "dd.MM.yyyy HH:mm";
             this.datetimePicker.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.datetimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datetimePicker.Location = new System.Drawing.Point(821, 109);
+            this.datetimePicker.Location = new System.Drawing.Point(1079, 133);
             this.datetimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.datetimePicker.Name = "datetimePicker";
             this.datetimePicker.Size = new System.Drawing.Size(299, 44);
@@ -182,7 +182,7 @@
             // 
             this.label4.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label4.Location = new System.Drawing.Point(814, 184);
+            this.label4.Location = new System.Drawing.Point(1072, 208);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(306, 89);
@@ -194,7 +194,7 @@
             this.all_time_test.CustomFormat = "mm:ss";
             this.all_time_test.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.all_time_test.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.all_time_test.Location = new System.Drawing.Point(812, 296);
+            this.all_time_test.Location = new System.Drawing.Point(1070, 320);
             this.all_time_test.Margin = new System.Windows.Forms.Padding(4);
             this.all_time_test.Name = "all_time_test";
             this.all_time_test.ShowUpDown = true;
@@ -207,7 +207,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::orientiring_test.Properties.Resources.Без_имени_2;
-            this.ClientSize = new System.Drawing.Size(1538, 817);
+            this.ClientSize = new System.Drawing.Size(2053, 1015);
             this.ControlBox = false;
             this.Controls.Add(this.all_time_test);
             this.Controls.Add(this.label4);
