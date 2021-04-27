@@ -41,9 +41,11 @@ namespace orientiring_test
 
         private void ready_test_go_Load(object sender, EventArgs e)
         {
-            label6.Visible = false;
-            label6.ScrollBars = ScrollBars.Vertical;//добавление скроллбара textBox-у
-            this.WindowState = FormWindowState.Maximized;
+            textBox1.Visible = false;
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
+            this.Size = new Size(1556, 864);
+            FormBorderStyle = FormBorderStyle.None;
             error_img_label.Visible = false;
             //считывание данных о тесте и заполнение нужных переменных и полей
             much_question_label = File.ReadAllText(@"C:/data_orientiring/users_test/logs/muchquestion.txt");
@@ -76,7 +78,8 @@ namespace orientiring_test
                 catch//если картинки для этого вопроса нет, включаем label и выводим в него информацию об этом
                 {
                     error_img_label.Visible = true;
-                    error_img_label.Font = new Font("Microsoft Sans Serif", 10);
+                    error_img_label.Font = new Font("SegoeScript", 14);
+                    error_img_label.ForeColor = Color.ForestGreen;
                     error_img_label.Text = "В данном вопросе нет картинки";
                 }
                 //-----------------------------------------------------------------
@@ -105,7 +108,7 @@ namespace orientiring_test
                 count++;
                 //-------------------------------------------------------
             }
-            question.Text = File.ReadAllText($@"C:/data_orientiring/users_test/{name}/1/q.txt");//вывод вопроса
+            textBox2.Text = File.ReadAllText($@"C:/data_orientiring/users_test/{name}/1/q.txt");//вывод вопроса
         }
         public void muchquest(int i)//метод вывода нужного количества чекбоксов по числу
         {
@@ -442,13 +445,15 @@ namespace orientiring_test
                 radioButton6.Visible = false;
                 radioButton7.Visible = false;
                 pictureBox.Visible = false;
+                error_img_label.Visible = false;
+                textBox2.Visible = false;
                 //-----------------------------------
             }
             else//тест не закончен
             {
                 DirectoryInfo dir = new DirectoryInfo($@"C:/data_orientiring/users_test/{name}/{numb_test+1}");//берем новую папку
                 string question_to_see = File.ReadAllText($@"{dir}/q.txt");//считываем вопрос
-                question.Text = question_to_see;//выводим его
+                textBox2.Text = question_to_see;//выводим его
                 if (have_pictures)//если есть картинки
                 {
                     try//пытаемся вывести текущую через битмап
@@ -460,7 +465,8 @@ namespace orientiring_test
                     {
                         //выводим информацию о том, что нет картинки
                         error_img_label.Visible = true;
-                        error_img_label.Font = new Font("Microsoft Sans Serif", 10);
+                        error_img_label.Font = new Font("SegoeScript", 14);
+                        error_img_label.ForeColor=Color.ForestGreen;
                         error_img_label.Text="В данном вопросе нет картинки";
                         //------------------------------------------
                     }
@@ -557,8 +563,14 @@ namespace orientiring_test
         {
             //кнопка завершить тест нажата
             button1.Visible = false;//выключаем кнопку ответить
+            error_img_label.Visible = false;
+            pictureBox.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
             end = true;//сообщаем, что тест закончен
-            pictureBox.Visible = true;//картинку включаем
+            //pictureBox.Visible = true;//картинку включаем
             if (!Directory.Exists($@"C:\data_orientiring\name\results\user_test\{name}"))//если пакпи нет, создаем ее и нужные подпапки
             {
                 Directory.CreateDirectory($@"C:\data_orientiring\name\results\user_test\{name}");
@@ -593,36 +605,66 @@ namespace orientiring_test
             alltime = (((starttime + 1) * 60) - (min * 60 + sec))-60;
             alltime = Convert.ToInt32(time_go);
             //------------------------------
-            label6.Visible = true;//включаем textBox
+            textBox1.Visible = true;//включаем textBox
             string Out = "Вы прошли тест за ";//создаем сообщение для вывода
             File.AppendAllText($@"C:\data_orientiring\name\results\user_test\{name}\time.txt", Convert.ToString(alltime));//дополняем файлик временем
-            label6.Text = Out;//выводим сообщение
-            //и дополняем его счетом и информацией об ответах
-            label6.Text = label6.Text + Convert.ToString(alltime);
-            label6.Text = label6.Text + " секунд";
-            label6.Text = label6.Text + "\r\n Ваше количество баллов- ";
-            label6.Text = label6.Text + point;
+            char[] time_mass = new char[5];
+            time_mass = alltime.ToString().ToCharArray();
+            string pre_last = "z";
+            if (alltime >= 10)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    if (time_mass[i].ToString() == time_mass.Last().ToString() && i != 0)
+                    {
+                        pre_last = time_mass[i - 1].ToString();
+                        break;
+                    }
+                }
+            }
+            textBox1.Text = Out;
+            textBox1.Text = textBox1.Text + Convert.ToString(alltime);
+            if (time_mass.Last().ToString() == "1" && pre_last != "1")
+            {
+                textBox1.Text = textBox1.Text + " секунду";
+            }
+            else if ((time_mass.Last().ToString() == "2" || time_mass.Last().ToString() == "3" || time_mass.Last().ToString() == "4") && pre_last != "1")
+            {
+                textBox1.Text = textBox1.Text + " секунды";
+            }
+            else if (time_mass.Last().ToString() == "5" || time_mass.Last().ToString() == "6" || time_mass.Last().ToString() == "7" || time_mass.Last().ToString() == "8" || time_mass.Last().ToString() == "9" || time_mass.Last().ToString() == "0")
+            {
+                textBox1.Text = textBox1.Text + " секунд";
+            }
+            else if (pre_last == "1")
+            {
+                textBox1.Text = textBox1.Text + " секунд";
+            }
+            textBox1.Text = textBox1.Text + Environment.NewLine+"Ваше количество баллов- ";
+            textBox1.Text = textBox1.Text + point;
             int er = 1;
             foreach (var i in r)
             {
-                label6.Text = label6.Text + "\r\n В вопросе "+er+" вы ";
+                textBox1.Text = textBox1.Text + Environment.NewLine+"В вопросе "+er+" Вы ";
                 if (u[er-1] == 10)
                 {
-                    label6.Text = label6.Text + "пропустили вопрос";
+                    textBox1.Text = textBox1.Text + "пропустили вопрос";
                     File.AppendAllText($@"C:\data_orientiring\name\results\user_test\{name}\{er}_ans.txt", "10");
                 }
                 else
                 {
-                    label6.Text = label6.Text + "ответили ";
-                    label6.Text = label6.Text + u[er-1];
+                    textBox1.Text = textBox1.Text + "ответили ";
+                    textBox1.Text = textBox1.Text + u[er-1];
                     File.AppendAllText($@"C:\data_orientiring\name\results\user_test\{name}\{i+1}_ans.txt", Convert.ToString(u[er-1]));
                 }
-                label6.Text = label6.Text + "\r\n Правильный ответ ";
-                label6.Text = label6.Text + r[er-1];
+                textBox1.Text = textBox1.Text + Environment.NewLine+"Правильный ответ ";
+                textBox1.Text = textBox1.Text + r[er-1];
                 button2.Visible = false;
                 er++;
             }
             //----------------------------------------------------
+            textBox1.Text = textBox1.Text + Environment.NewLine + "Вы ответили правильно на следующее количество вопросов: ";
+            textBox1.Text = textBox1.Text + point;
             if (point==Convert.ToInt32(much_question_label))//если количество баллов совпадает с количеством ответов, значит тест пройден правильно
             {
                 MessageBox.Show("Вы прошли тест правильно", "Поздравляем", MessageBoxButtons.OK, MessageBoxIcon.Question);

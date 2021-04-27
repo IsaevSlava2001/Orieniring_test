@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing;
 
 namespace orientiring_test
 {
@@ -81,6 +82,10 @@ namespace orientiring_test
         private void test_create_settings_Load(object sender, EventArgs e)
         {
             button1.Enabled = false;//при загрузке отключаем кнопку
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
+            this.Size = new Size(1556, 864);
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         private void name_test_TextChanged(object sender, EventArgs e)

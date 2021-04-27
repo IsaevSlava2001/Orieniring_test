@@ -113,6 +113,8 @@ namespace orientiring_test
 
         private void _1_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
             this.Size = new Size(1556, 864);
             FormBorderStyle = FormBorderStyle.None;//вывод окна по размеру рабочей области
             //загрузка изначальных положений всех элементов

@@ -110,6 +110,8 @@ namespace orientiring_test
 
         private void var5_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
             this.Size = new Size(1556, 864);
             FormBorderStyle = FormBorderStyle.None;
             pictureBox1.Visible = false;

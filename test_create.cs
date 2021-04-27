@@ -32,6 +32,10 @@ namespace orientiring_test
         private void test_create_Load(object sender, EventArgs e)
         {
             //считваем необходимые данные из логов и создаем переменных
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
+            this.Size = new Size(1556, 864);
+            FormBorderStyle = FormBorderStyle.None;
             pass_textBox.Visible = false;
             zipbutton.Visible = false;
             progressBarconv.Visible = false;

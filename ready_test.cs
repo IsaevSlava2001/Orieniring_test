@@ -185,7 +185,11 @@ namespace orientiring_test
 
         private void ready_test_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
             start.Enabled = false;
+            this.Size = new Size(1556, 864);
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         private void exit_Click(object sender, EventArgs e)

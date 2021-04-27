@@ -58,7 +58,7 @@
             this.logintextBox.HideSelection = false;
             this.logintextBox.Location = new System.Drawing.Point(697, 86);
             this.logintextBox.Name = "logintextBox";
-            this.logintextBox.Size = new System.Drawing.Size(289, 37);
+            this.logintextBox.Size = new System.Drawing.Size(289, 44);
             this.logintextBox.TabIndex = 0;
             this.logintextBox.Text = "Введите логин";
             this.logintextBox.Enter += new System.EventHandler(this.logintextBox_Enter);
@@ -73,7 +73,7 @@
             this.passworrdtextBox.ForeColor = System.Drawing.Color.ForestGreen;
             this.passworrdtextBox.Location = new System.Drawing.Point(697, 135);
             this.passworrdtextBox.Name = "passworrdtextBox";
-            this.passworrdtextBox.Size = new System.Drawing.Size(289, 37);
+            this.passworrdtextBox.Size = new System.Drawing.Size(289, 44);
             this.passworrdtextBox.TabIndex = 1;
             this.passworrdtextBox.Text = "Введите пароль";
             this.passworrdtextBox.Enter += new System.EventHandler(this.passworrdtextBox_Enter);
@@ -87,9 +87,9 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.checkBox1.Location = new System.Drawing.Point(737, 189);
+            this.checkBox1.Location = new System.Drawing.Point(711, 189);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(214, 34);
+            this.checkBox1.Size = new System.Drawing.Size(268, 42);
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Показать пароль";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -178,10 +178,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(736, 38);
+            this.label1.Location = new System.Drawing.Point(718, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 31);
+            this.label1.Size = new System.Drawing.Size(252, 40);
             this.label1.TabIndex = 15;
             this.label1.Text = "Вход для тренера";
             // 
@@ -243,6 +243,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Вход";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

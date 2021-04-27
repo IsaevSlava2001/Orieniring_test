@@ -110,7 +110,10 @@ namespace orientiring_test
 
         private void var8_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
+            this.Size = new Size(1556, 864);
+            FormBorderStyle = FormBorderStyle.None;
             pictureBox1.Visible = false;
             pictureBox2.Visible = false;
             pictureBox3.Visible = false;
