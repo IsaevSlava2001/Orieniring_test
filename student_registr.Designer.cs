@@ -36,10 +36,10 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.ForestGreen;
             this.button1.Location = new System.Drawing.Point(979, 508);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(275, 71);
             this.button1.TabIndex = 0;
@@ -49,13 +49,13 @@
             // 
             // nametextBox
             // 
-            this.nametextBox.Font = new System.Drawing.Font("Segoe Script", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nametextBox.Font = new System.Drawing.Font("Segoe Print", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nametextBox.ForeColor = System.Drawing.Color.ForestGreen;
             this.nametextBox.Location = new System.Drawing.Point(979, 362);
-            this.nametextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nametextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nametextBox.Multiline = true;
             this.nametextBox.Name = "nametextBox";
-            this.nametextBox.Size = new System.Drawing.Size(273, 82);
+            this.nametextBox.Size = new System.Drawing.Size(273, 114);
             this.nametextBox.TabIndex = 1;
             this.nametextBox.Text = "введите имя и фамилию";
             this.nametextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -65,10 +65,10 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.ForestGreen;
             this.button2.Location = new System.Drawing.Point(979, 641);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(275, 66);
             this.button2.TabIndex = 2;
@@ -81,13 +81,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(2053, 1015);
+            this.ClientSize = new System.Drawing.Size(1924, 1015);
             this.ControlBox = false;
             this.Controls.Add(this.button2);
             this.Controls.Add(this.nametextBox);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "student_registr";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Вход для студента";

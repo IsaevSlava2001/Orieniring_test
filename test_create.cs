@@ -394,5 +394,45 @@ namespace orientiring_test
                 pass_textBox.Text = "пароль для архива";
             }
         }
+
+        private void quest_text_box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ans_TB_1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ans_TB_2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ans_TB_3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ans_TB_4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ans_TB_5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pass_textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

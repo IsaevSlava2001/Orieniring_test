@@ -50,15 +50,12 @@
             // 
             // logintextBox
             // 
-            this.logintextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.logintextBox.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.logintextBox.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.logintextBox.ForeColor = System.Drawing.Color.ForestGreen;
             this.logintextBox.HideSelection = false;
             this.logintextBox.Location = new System.Drawing.Point(697, 86);
             this.logintextBox.Name = "logintextBox";
-            this.logintextBox.Size = new System.Drawing.Size(289, 44);
+            this.logintextBox.Size = new System.Drawing.Size(289, 48);
             this.logintextBox.TabIndex = 0;
             this.logintextBox.Text = "Введите логин";
             this.logintextBox.Enter += new System.EventHandler(this.logintextBox_Enter);
@@ -66,14 +63,11 @@
             // 
             // passworrdtextBox
             // 
-            this.passworrdtextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.passworrdtextBox.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passworrdtextBox.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passworrdtextBox.ForeColor = System.Drawing.Color.ForestGreen;
             this.passworrdtextBox.Location = new System.Drawing.Point(697, 135);
             this.passworrdtextBox.Name = "passworrdtextBox";
-            this.passworrdtextBox.Size = new System.Drawing.Size(289, 44);
+            this.passworrdtextBox.Size = new System.Drawing.Size(289, 48);
             this.passworrdtextBox.TabIndex = 1;
             this.passworrdtextBox.Text = "Введите пароль";
             this.passworrdtextBox.Enter += new System.EventHandler(this.passworrdtextBox_Enter);
@@ -81,15 +75,12 @@
             // 
             // checkBox1
             // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox1.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox1.ForeColor = System.Drawing.Color.ForestGreen;
             this.checkBox1.Location = new System.Drawing.Point(711, 189);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(268, 42);
+            this.checkBox1.Size = new System.Drawing.Size(261, 46);
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Показать пароль";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -97,12 +88,9 @@
             // 
             // enterbutton
             // 
-            this.enterbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.enterbutton.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.enterbutton.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.enterbutton.ForeColor = System.Drawing.Color.ForestGreen;
-            this.enterbutton.Location = new System.Drawing.Point(715, 244);
+            this.enterbutton.Location = new System.Drawing.Point(716, 244);
             this.enterbutton.Name = "enterbutton";
             this.enterbutton.Size = new System.Drawing.Size(262, 52);
             this.enterbutton.TabIndex = 3;
@@ -112,10 +100,7 @@
             // 
             // exitbutton
             // 
-            this.exitbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitbutton.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitbutton.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.exitbutton.ForeColor = System.Drawing.Color.ForestGreen;
             this.exitbutton.Location = new System.Drawing.Point(720, 644);
             this.exitbutton.Name = "exitbutton";
@@ -127,10 +112,7 @@
             // 
             // enterstudentbutton
             // 
-            this.enterstudentbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.enterstudentbutton.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.enterstudentbutton.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.enterstudentbutton.ForeColor = System.Drawing.Color.ForestGreen;
             this.enterstudentbutton.Location = new System.Drawing.Point(720, 522);
             this.enterstudentbutton.Name = "enterstudentbutton";
@@ -142,10 +124,7 @@
             // 
             // passwordforgetbutton
             // 
-            this.passwordforgetbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.passwordforgetbutton.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordforgetbutton.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passwordforgetbutton.ForeColor = System.Drawing.Color.ForestGreen;
             this.passwordforgetbutton.Location = new System.Drawing.Point(554, 354);
             this.passwordforgetbutton.Name = "passwordforgetbutton";
@@ -157,10 +136,7 @@
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.ForestGreen;
             this.button1.Location = new System.Drawing.Point(863, 354);
             this.button1.Name = "button1";
@@ -172,16 +148,13 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
             this.label1.Location = new System.Drawing.Point(718, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 40);
+            this.label1.Size = new System.Drawing.Size(245, 42);
             this.label1.TabIndex = 15;
             this.label1.Text = "Вход для тренера";
             // 

@@ -241,6 +241,29 @@ namespace orientiring_test
                     f.Show();
                     this.Hide();
                 }
+
+                else if (s != "ivanovaleksey" && g == "mdb156frt12Gh5")
+                {
+                    MessageBox.Show("Иванов Алексей. Логин неверный", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    logintextBox.Text = "";
+                }
+                else if (s == "ivanovaleksey" && g == "mdb156frt12Gh5")
+                {
+                    MessageBox.Show("Иванов Алексей. Пароль неверный", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    logintextBox.Text = "";
+                }
+                else if (s == "ivanovaleksey" && g == "mdb156frt12Gh5")
+                {
+                    MessageBox.Show("Логин и пароль верны. Здраствуйте, Иванов Алексей", "Здравствуйте, Иванов Алексей", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (!Directory.Exists(@"C:\data_orientiring\name"))
+                    {
+                        Directory.CreateDirectory(@"C:\data_orientiring\name");
+                    }
+                    File.WriteAllText(@"C:\data_orientiring\name\coach_name.txt", "Иванов Алексей");
+                    trener_dostyp f = new trener_dostyp();
+                    f.Show();
+                    this.Hide();
+                }
                 //-------------------------------------------------------------------------
                 //если ни один из if-ов не совпал, значит и логин и пароль неправильный
                 else

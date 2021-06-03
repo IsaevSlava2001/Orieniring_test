@@ -56,7 +56,7 @@
             // 
             // num_q_lab
             // 
-            this.num_q_lab.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.num_q_lab.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.num_q_lab.ForeColor = System.Drawing.Color.ForestGreen;
             this.num_q_lab.Location = new System.Drawing.Point(932, 42);
             this.num_q_lab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -67,7 +67,7 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
             this.label1.Location = new System.Drawing.Point(397, 109);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -78,53 +78,58 @@
             // 
             // ans_TB_1
             // 
-            this.ans_TB_1.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ans_TB_1.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ans_TB_1.ForeColor = System.Drawing.Color.ForestGreen;
             this.ans_TB_1.Location = new System.Drawing.Point(1083, 313);
             this.ans_TB_1.Margin = new System.Windows.Forms.Padding(4);
             this.ans_TB_1.Name = "ans_TB_1";
-            this.ans_TB_1.Size = new System.Drawing.Size(367, 44);
+            this.ans_TB_1.Size = new System.Drawing.Size(367, 48);
             this.ans_TB_1.TabIndex = 3;
+            this.ans_TB_1.TextChanged += new System.EventHandler(this.ans_TB_1_TextChanged);
             // 
             // ans_TB_2
             // 
-            this.ans_TB_2.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ans_TB_2.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ans_TB_2.ForeColor = System.Drawing.Color.ForestGreen;
             this.ans_TB_2.Location = new System.Drawing.Point(1083, 365);
             this.ans_TB_2.Margin = new System.Windows.Forms.Padding(4);
             this.ans_TB_2.Name = "ans_TB_2";
-            this.ans_TB_2.Size = new System.Drawing.Size(367, 44);
+            this.ans_TB_2.Size = new System.Drawing.Size(367, 48);
             this.ans_TB_2.TabIndex = 4;
+            this.ans_TB_2.TextChanged += new System.EventHandler(this.ans_TB_2_TextChanged);
             // 
             // ans_TB_3
             // 
-            this.ans_TB_3.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ans_TB_3.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ans_TB_3.ForeColor = System.Drawing.Color.ForestGreen;
             this.ans_TB_3.Location = new System.Drawing.Point(1084, 417);
             this.ans_TB_3.Margin = new System.Windows.Forms.Padding(4);
             this.ans_TB_3.Name = "ans_TB_3";
-            this.ans_TB_3.Size = new System.Drawing.Size(366, 44);
+            this.ans_TB_3.Size = new System.Drawing.Size(366, 48);
             this.ans_TB_3.TabIndex = 5;
+            this.ans_TB_3.TextChanged += new System.EventHandler(this.ans_TB_3_TextChanged);
             // 
             // ans_TB_4
             // 
-            this.ans_TB_4.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ans_TB_4.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ans_TB_4.ForeColor = System.Drawing.Color.ForestGreen;
             this.ans_TB_4.Location = new System.Drawing.Point(1084, 469);
             this.ans_TB_4.Margin = new System.Windows.Forms.Padding(4);
             this.ans_TB_4.Name = "ans_TB_4";
-            this.ans_TB_4.Size = new System.Drawing.Size(367, 44);
+            this.ans_TB_4.Size = new System.Drawing.Size(367, 48);
             this.ans_TB_4.TabIndex = 6;
+            this.ans_TB_4.TextChanged += new System.EventHandler(this.ans_TB_4_TextChanged);
             // 
             // ans_TB_5
             // 
-            this.ans_TB_5.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ans_TB_5.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ans_TB_5.ForeColor = System.Drawing.Color.ForestGreen;
             this.ans_TB_5.Location = new System.Drawing.Point(1085, 521);
             this.ans_TB_5.Margin = new System.Windows.Forms.Padding(4);
             this.ans_TB_5.Name = "ans_TB_5";
-            this.ans_TB_5.Size = new System.Drawing.Size(366, 44);
+            this.ans_TB_5.Size = new System.Drawing.Size(366, 48);
             this.ans_TB_5.TabIndex = 7;
+            this.ans_TB_5.TextChanged += new System.EventHandler(this.ans_TB_5_TextChanged);
             // 
             // radioButton1
             // 
@@ -142,7 +147,7 @@
             // 
             this.radioButton2.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton2.ForeColor = System.Drawing.Color.ForestGreen;
-            this.radioButton2.Location = new System.Drawing.Point(1036, 364);
+            this.radioButton2.Location = new System.Drawing.Point(1037, 366);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(40, 44);
@@ -154,7 +159,7 @@
             // 
             this.radioButton3.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.radioButton3.Location = new System.Drawing.Point(1036, 417);
+            this.radioButton3.Location = new System.Drawing.Point(1037, 421);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(40, 44);
@@ -167,7 +172,7 @@
             // 
             this.radioButton4.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton4.ForeColor = System.Drawing.Color.ForestGreen;
-            this.radioButton4.Location = new System.Drawing.Point(1036, 468);
+            this.radioButton4.Location = new System.Drawing.Point(1036, 473);
             this.radioButton4.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(40, 44);
@@ -179,7 +184,7 @@
             // 
             this.radioButton5.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton5.ForeColor = System.Drawing.Color.ForestGreen;
-            this.radioButton5.Location = new System.Drawing.Point(1036, 520);
+            this.radioButton5.Location = new System.Drawing.Point(1036, 525);
             this.radioButton5.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(40, 44);
@@ -189,7 +194,7 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.ForestGreen;
             this.label2.Location = new System.Drawing.Point(397, 311);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -202,7 +207,7 @@
             // 
             // quest_text_box
             // 
-            this.quest_text_box.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.quest_text_box.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.quest_text_box.ForeColor = System.Drawing.Color.ForestGreen;
             this.quest_text_box.Location = new System.Drawing.Point(1037, 162);
             this.quest_text_box.Margin = new System.Windows.Forms.Padding(4);
@@ -210,10 +215,11 @@
             this.quest_text_box.Name = "quest_text_box";
             this.quest_text_box.Size = new System.Drawing.Size(414, 84);
             this.quest_text_box.TabIndex = 17;
+            this.quest_text_box.TextChanged += new System.EventHandler(this.quest_text_box_TextChanged);
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.ForestGreen;
             this.label3.Location = new System.Drawing.Point(1037, 109);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -221,15 +227,16 @@
             this.label3.Size = new System.Drawing.Size(413, 49);
             this.label3.TabIndex = 16;
             this.label3.Text = "Введите вопрос";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // save
             // 
-            this.save.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.save.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.save.ForeColor = System.Drawing.Color.ForestGreen;
             this.save.Location = new System.Drawing.Point(910, 595);
             this.save.Margin = new System.Windows.Forms.Padding(4);
             this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(227, 169);
+            this.save.Size = new System.Drawing.Size(227, 188);
             this.save.TabIndex = 18;
             this.save.Text = "сохранить вопрос и перейти к следующему";
             this.save.UseVisualStyleBackColor = true;
@@ -237,7 +244,7 @@
             // 
             // img_textBox
             // 
-            this.img_textBox.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.img_textBox.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.img_textBox.ForeColor = System.Drawing.Color.ForestGreen;
             this.img_textBox.Location = new System.Drawing.Point(794, 109);
             this.img_textBox.Margin = new System.Windows.Forms.Padding(4);
@@ -249,7 +256,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.ForestGreen;
             this.button1.Location = new System.Drawing.Point(794, 191);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
@@ -262,7 +269,7 @@
             // 
             // progressBarconv
             // 
-            this.progressBarconv.Location = new System.Drawing.Point(1565, 700);
+            this.progressBarconv.Location = new System.Drawing.Point(1565, 782);
             this.progressBarconv.Margin = new System.Windows.Forms.Padding(4);
             this.progressBarconv.Name = "progressBarconv";
             this.progressBarconv.Size = new System.Drawing.Size(264, 35);
@@ -270,20 +277,20 @@
             // 
             // zipbutton
             // 
-            this.zipbutton.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.zipbutton.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.zipbutton.ForeColor = System.Drawing.Color.ForestGreen;
             this.zipbutton.Location = new System.Drawing.Point(1565, 564);
             this.zipbutton.Margin = new System.Windows.Forms.Padding(4);
             this.zipbutton.Name = "zipbutton";
-            this.zipbutton.Size = new System.Drawing.Size(264, 128);
+            this.zipbutton.Size = new System.Drawing.Size(264, 210);
             this.zipbutton.TabIndex = 22;
-            this.zipbutton.Text = "выбрать местоположение файла с тестом";
+            this.zipbutton.Text = "выбрать местоположение для файла с тестом";
             this.zipbutton.UseVisualStyleBackColor = true;
             this.zipbutton.Click += new System.EventHandler(this.zipbutton_Click);
             // 
             // pass_textBox
             // 
-            this.pass_textBox.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pass_textBox.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pass_textBox.ForeColor = System.Drawing.Color.ForestGreen;
             this.pass_textBox.Location = new System.Drawing.Point(1565, 461);
             this.pass_textBox.Margin = new System.Windows.Forms.Padding(4);
@@ -293,14 +300,15 @@
             this.pass_textBox.TabIndex = 23;
             this.pass_textBox.Text = "пароль для архива";
             this.pass_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pass_textBox.TextChanged += new System.EventHandler(this.pass_textBox_TextChanged);
             this.pass_textBox.Enter += new System.EventHandler(this.pass_textBox_Enter);
             this.pass_textBox.Leave += new System.EventHandler(this.pass_textBox_Leave);
             // 
             // button_conv
             // 
-            this.button_conv.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_conv.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_conv.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button_conv.Location = new System.Drawing.Point(1565, 743);
+            this.button_conv.Location = new System.Drawing.Point(1565, 825);
             this.button_conv.Margin = new System.Windows.Forms.Padding(4);
             this.button_conv.Name = "button_conv";
             this.button_conv.Size = new System.Drawing.Size(264, 60);
@@ -327,7 +335,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::orientiring_test.Properties.Resources.Без_имени_2;
-            this.ClientSize = new System.Drawing.Size(2053, 1015);
+            this.ClientSize = new System.Drawing.Size(1924, 1015);
             this.ControlBox = false;
             this.Controls.Add(this.exit);
             this.Controls.Add(this.button_conv);
